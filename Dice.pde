@@ -4,6 +4,7 @@ int total;
 void setup()
 {
 	noLoop();
+	background(0,0,0);
 	//size(displayWidth,displayHeight);
 	size(1200,500);
 }
