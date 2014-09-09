@@ -4,20 +4,21 @@ int total;
 void setup()
 {
 	noLoop();
-	size(displayWidth,displayHeight);
+	//size(displayWidth,displayHeight);
+	size(1200,500);
 }
 void draw(){
-	for (int i = 0; i < displayWidth; i++){
-		for (int j = 0; j<displayHeight; j++){
-			one = new Die(10+60*i,10+60*j);
+	for (int i = 0; i < 1200; i++){
+		for (int j = 0; j<500; j++){
+			one = new Die(0+50*i,0+50*j);
 			one.roll();
 			one.show();
 			total += one.numDots;
 			println(total);	
-
 		}
 	}
-	
+	textSize(100);
+	text(total,200,200);	
 }
 
 void mousePressed()
@@ -47,20 +48,20 @@ class Die //models one single dice cube
 		if (numDots == 1){
 			fill(0,0,0);
 			ellipse(myX+25,myY+25,dot,dot);
-			text("1",myX,myY);
+			//text("1",myX,myY);
 		}
 		if (numDots == 2){
 			fill(0,0,0);
 			ellipse(myX+15, myY+15,dot,dot);
 			ellipse(myX+35, myY+35,dot,dot);
-			text("2",myX,myY);
+			//text("2",myX,myY);
 		}
 		if (numDots == 3){
 			fill(0,0,0);
 			ellipse(myX+25,myY+10,dot,dot);
 			ellipse(myX+25,myY+25,dot,dot);
 			ellipse(myX+25,myY+40,dot,dot);
-			text("3",myX,myY);
+			//text("3",myX,myY);
 		}
 		if (numDots == 4){
 			fill(0,0,0);
@@ -68,7 +69,7 @@ class Die //models one single dice cube
 			ellipse(myX+15,myY+35,dot,dot);
 			ellipse(myX+35,myY+15,dot,dot);
 			ellipse(myX+35,myY+35,dot,dot);
-			text("4",myX,myY);
+			//text("4",myX,myY);
 		}
 		if (numDots == 5){
 			fill(0,0,0);
@@ -77,7 +78,7 @@ class Die //models one single dice cube
 			ellipse(myX+10,myY+38,dot,dot);
 			ellipse(myX+40,myY+13,dot,dot);
 			ellipse(myX+40,myY+38,dot,dot);
-			text("5",myX,myY);
+			//text("5",myX,myY);
 		}
 		if (numDots == 6){
 			fill(0,0,0);
@@ -87,7 +88,7 @@ class Die //models one single dice cube
 			ellipse(myX+35,myY+10,dot,dot);
 			ellipse(myX+35,myY+25,dot,dot);
 			ellipse(myX+35,myY+40,dot,dot);
-			text("6",myX,myY);
+			//text("6",myX,myY);
 		}
 
 	}
