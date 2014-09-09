@@ -19,7 +19,7 @@ void draw(){
 	}
 	fill(0,0,0);
 	textSize(100);
-	text("total: "+total,200,200);	
+	text("total: "+total,250,200);	
 }
 
 void mousePressed()
