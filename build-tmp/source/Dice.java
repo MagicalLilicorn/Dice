@@ -23,16 +23,19 @@ public void setup()
 	background(0,0,0);
 	//size(displayWidth,displayHeight);
 	size(1200,500);
+
 }
 public void draw(){
-	for (int i = 0; i < 1200; i++){
-		for (int j = 0; j<500; j++){
+
+	for (int i = 0; i < 24; i++){
+		for (int j = 0; j<10; j++){
 			one = new Die(0+50*i,0+50*j);
 			one.roll();
 			one.show();
 			total += one.numDots;
 		}
 	}
+	
 	fill(0,0,0);
 	textSize(100);
 	text("total: "+total,250,200);	
