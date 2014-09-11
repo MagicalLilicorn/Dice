@@ -6,14 +6,14 @@ void setup()
 	noLoop();
 	background(0,0,0);
 	//size(displayWidth,displayHeight);
-	size(1200,500);
+	size(1200,600);
 
 }
 void draw(){
 	total = 0;
 
 	for (int i = 0; i < 1200; i+=10){
-		for (int j = 0; j<500; j+=10){
+		for (int j = 0; j<600; j+=10){
 			one = new Die(i,j);
 			one.roll();
 			one.show();
