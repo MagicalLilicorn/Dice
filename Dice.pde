@@ -48,11 +48,10 @@ class Die //models one single dice cube
 	void show()
 	{
 		float dot = .5;
-		fill(0,0,0);
-		strokeWeight(.5);
-		stroke(255,255,255);
+		fill(random(0,255),255,255);
+		noStroke();
 		rect(myX,myY,5,5);
-		fill(255,0,0);
+		fill(0,0,0);
 		if (numDots == 1){
 			ellipse(myX+5/2,myY+5/2,dot,dot);
 		}
