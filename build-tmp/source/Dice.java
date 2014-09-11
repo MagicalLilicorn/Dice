@@ -38,8 +38,8 @@ public void draw(){
 	}
 
 	fill(0,0,0);
-	textSize(100);
-	text("total: "+total,250,200);	
+	textSize(15);
+	text("total: "+total,1100,530);	
 }
 
 public void mousePressed()
