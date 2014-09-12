@@ -16,21 +16,21 @@ public class Dice extends PApplet {
 
 Die one;
 int total;
-int diceSize = 5;
+int diceSize = 4;
 
 public void setup()
 {
 	noLoop();
 	background(0,0,0);
 	//size(displayWidth,displayHeight);
-	size(1200,550);
+	size(1400,650);
 
 }
 public void draw(){
 	total = 0;
 
-	for (int i = 0; i < 1200; i+=diceSize){
-		for (int j = 0; j<550; j+=diceSize){
+	for (int i = 0; i < 1400; i+=diceSize){
+		for (int j = 0; j<650; j+=diceSize){
 			one = new Die(i,j);
 			one.roll();
 			one.show();
@@ -64,10 +64,13 @@ class Die //models one single dice cube
 	}
 	public void show()
 	{
-		fill(random(0,255),255,255);
+		if ((myX+myY)%8 == 0){
+			fill(random(0,255),200,200);
+		} else {
+			fill(255,255,255);
+		}
 		noStroke();
 		rect(myX,myY,diceSize,diceSize);
-		fill(0,0,0);
 		stroke(0);
 		if (numDots == 1){
 			point(myX+5/2,myY+5/2);
