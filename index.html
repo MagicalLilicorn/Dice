@@ -5,6 +5,15 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles.css">
 		<script src="processing.js"></script>
+		<script>
+		canvas = document.getElementbyId("Dice");
+		if (canvas.width < window.innerWidth){
+			canvas.width = window.innerWidth;
+		}
+		if (canvas.height < window.innerHeight){
+			canvas.height = window.innerHeight;
+		}
+		</script>
 	</head>
 	<body>
 		<header>
