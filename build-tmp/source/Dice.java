@@ -23,14 +23,14 @@ public void setup()
 	noLoop();
 	background(0,0,0);
 	//size(displayWidth,displayHeight);
-	size(1012,700);
+	size(1012,670);
 
 }
 public void draw(){
 	total = 0;
 
 	for (int i = 0; i < 1012; i+=diceSize){
-		for (int j = 0; j<700; j+=diceSize){
+		for (int j = 0; j<670; j+=diceSize){
 			one = new Die(i,j);
 			one.roll();
 			one.show();
