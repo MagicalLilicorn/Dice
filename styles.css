@@ -25,3 +25,9 @@ footer {
 p {
     height:5%;
 }
+
+#Dice {
+    display: block;
+    position:absolute;
+    
+}
