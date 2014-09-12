@@ -23,7 +23,7 @@ void draw(){
 
 	fill(0,0,0);
 	textSize(15);
-	text("total: "+total,1100,530);	
+	text("total: "+total,900,530);	
 }
 
 void mousePressed()
