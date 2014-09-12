@@ -21,7 +21,7 @@ footer {
 	font-size: 90%;
 }
 
-/*#Dice {
-    width:100%;
-    height:100%;
-}*/
+#Dice {
+    width:50%;
+    height:50%;
+}
