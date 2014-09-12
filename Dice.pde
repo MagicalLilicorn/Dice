@@ -23,7 +23,7 @@ void draw(){
 
 	fill(0,0,0);
 	textSize(20);
-	text("total: "+total,900,530);	
+	text("total: "+total,800,530);	
 }
 
 void mousePressed()
@@ -42,7 +42,7 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		numDots = (int)(Math.random()*6+1);
+		numDots = 6;//(int)(Math.random()*6+1);
 		
 	}
 	void show()
@@ -81,12 +81,12 @@ class Die //models one single dice cube
 			point(myX+3,myY+3);
 		}
 		if (numDots == 6){
-			point(myX+1,myY+1);
-			point(myX+1,myY+2);
-			point(myX+1,myY+3);
-			point(myX+3,myY+1);
-			point(myX+3,myY+2);
-			point(myX+3,myY+3);
+			point(myX+.5,myY);
+			point(myX+.5,myY+1);
+			point(myX+.5,myY+2);
+			point(myX+2.5,myY);
+			point(myX+2.5,myY+1);
+			point(myX+2.5,myY+2);
 		}
 
 	}

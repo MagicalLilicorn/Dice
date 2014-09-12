@@ -22,15 +22,14 @@ public void setup()
 {
 	noLoop();
 	background(0,0,0);
-	size(displayWidth,displayHeight);
-	//size(1008,668);
+	size(1004,668);
 
 }
 public void draw(){
 	total = 0;
 
-	for (int i = 0; i < displayWidth; i+=diceSize){
-		for (int j = 0; j<displayHeight; j+=diceSize){
+	for (int i = 0; i < 1004; i+=diceSize){
+		for (int j = 0; j<668; j+=diceSize){
 			one = new Die(i,j);
 			one.roll();
 			one.show();
@@ -39,8 +38,8 @@ public void draw(){
 	}
 
 	fill(0,0,0);
-	textSize(15);
-	text("total: "+total,1100,530);	
+	textSize(20);
+	text("total: "+total,800,530);	
 }
 
 public void mousePressed()
@@ -59,7 +58,7 @@ class Die //models one single dice cube
 	}
 	public void roll()
 	{
-		numDots = (int)(Math.random()*6+1);
+		numDots = 6;//(int)(Math.random()*6+1);
 		
 	}
 	public void show()
@@ -98,12 +97,12 @@ class Die //models one single dice cube
 			point(myX+3,myY+3);
 		}
 		if (numDots == 6){
-			point(myX+1,myY+1);
-			point(myX+1,myY+2);
-			point(myX+1,myY+3);
-			point(myX+3,myY+1);
-			point(myX+3,myY+2);
-			point(myX+3,myY+3);
+			point(myX+.5f,myY);
+			point(myX+.5f,myY+1);
+			point(myX+.5f,myY+2);
+			point(myX+2.5f,myY);
+			point(myX+2.5f,myY+1);
+			point(myX+2.5f,myY+2);
 		}
 
 	}
