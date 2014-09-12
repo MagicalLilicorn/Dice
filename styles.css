@@ -13,7 +13,7 @@ body {
 }
 
 header {
-	height:10%;
+	height:5%;
 }
 
 footer {
@@ -22,4 +22,6 @@ footer {
 	font-size: 90%;
 }
 
-
+p {
+    height:5%;
+}
