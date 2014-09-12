@@ -7,14 +7,14 @@ void setup()
 	noLoop();
 	background(0,0,0);
 	//size(displayWidth,displayHeight);
-	size(1400,650);
+	size(1024,768);
 
 }
 void draw(){
 	total = 0;
 
-	for (int i = 0; i < 1400; i+=diceSize){
-		for (int j = 0; j<650; j+=diceSize){
+	for (int i = 0; i < 1024; i+=diceSize){
+		for (int j = 0; j<768; j+=diceSize){
 			one = new Die(i,j);
 			one.roll();
 			one.show();
