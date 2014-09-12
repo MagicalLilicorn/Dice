@@ -22,7 +22,7 @@ public void setup()
 {
 	noLoop();
 	background(0,0,0);
-	size(1004,668);
+	size(window.innerWidth,668);
 
 }
 public void draw(){
@@ -58,7 +58,7 @@ class Die //models one single dice cube
 	}
 	public void roll()
 	{
-		numDots = 6;//(int)(Math.random()*6+1);
+		numDots = (int)(Math.random()*6+1);
 		
 	}
 	public void show()
@@ -72,11 +72,11 @@ class Die //models one single dice cube
 		rect(myX,myY,diceSize,diceSize);
 		stroke(0);
 		if (numDots == 1){
-			point(myX+diceSize/4,myY+diceSize/4);
+			point(myX+1,myY+1);
 		}
 		if (numDots == 2){
-			point(myX, myY);
-			point(myX+diceSize/2, myY+diceSize/2);
+			point(myX+1, myY+1);
+			point(myX+3, 3);
 		}
 		if (numDots == 3){
 			point(myX+1,myY+1);
@@ -97,12 +97,12 @@ class Die //models one single dice cube
 			point(myX+3,myY+3);
 		}
 		if (numDots == 6){
-			point(myX+.5f,myY);
-			point(myX+.5f,myY+1);
-			point(myX+.5f,myY+2);
-			point(myX+2.5f,myY);
-			point(myX+2.5f,myY+1);
-			point(myX+2.5f,myY+2);
+			point(myX+1,myY+1);
+			point(myX+1,myY+2);
+			point(myX+1,myY+3);
+			point(myX+3,myY+1);
+			point(myX+3,myY+2);
+			point(myX+3,myY+3);
 		}
 
 	}
