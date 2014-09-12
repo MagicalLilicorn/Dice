@@ -22,7 +22,7 @@ void draw(){
 	}
 
 	fill(0,0,0);
-	textSize(15);
+	textSize(20);
 	text("total: "+total,900,530);	
 }
 
