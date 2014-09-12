@@ -6,15 +6,15 @@ void setup()
 {
 	noLoop();
 	background(0,0,0);
-	//size(displayWidth,displayHeight);
-	size(1008,668);
+	size(displayWidth,displayHeight);
+	//size(1008,668);
 
 }
 void draw(){
 	total = 0;
 
-	for (int i = 0; i < 1008; i+=diceSize){
-		for (int j = 0; j<668; j+=diceSize){
+	for (int i = 0; i < displayWidth; i+=diceSize){
+		for (int j = 0; j<displayHeight; j+=diceSize){
 			one = new Die(i,j);
 			one.roll();
 			one.show();
