@@ -1,5 +1,6 @@
 Die one;
 int total;
+int diceSize = 5;
 
 void setup()
 {
@@ -12,8 +13,8 @@ void setup()
 void draw(){
 	total = 0;
 
-	for (int i = 0; i < 1200; i+=5){
-		for (int j = 0; j<550; j+=5){
+	for (int i = 0; i < 1200; i+=diceSize){
+		for (int j = 0; j<550; j+=diceSize){
 			one = new Die(i,j);
 			one.roll();
 			one.show();
@@ -47,43 +48,43 @@ class Die //models one single dice cube
 	}
 	void show()
 	{
-		float dot = .5;
 		fill(random(0,255),255,255);
 		noStroke();
-		rect(myX,myY,5,5);
+		rect(myX,myY,diceSize,diceSize);
 		fill(0,0,0);
+		stroke(0);
 		if (numDots == 1){
-			ellipse(myX+5/2,myY+5/2,dot,dot);
+			point(myX+5/2,myY+5/2);
 		}
 		if (numDots == 2){
-			ellipse(myX+3/2, myY+3/2,dot,dot);
-			ellipse(myX+7/2, myY+7/2,dot,dot);
+			point(myX+3/2, myY+3/2);
+			point(myX+7/2, myY+7/2);
 		}
 		if (numDots == 3){
-			ellipse(myX+5/2,myY+2/2,dot,dot);
-			ellipse(myX+5/2,myY+5/2,dot,dot);
-			ellipse(myX+5/2,myY+8/2,dot,dot);
+			point(myX+5/2,myY+2/2);
+			point(myX+5/2,myY+5/2);
+			point(myX+5/2,myY+8/2);
 		}
 		if (numDots == 4){
-			ellipse(myX+3/2,myY+3/2,dot,dot);
-			ellipse(myX+3/2,myY+7/2,dot,dot);
-			ellipse(myX+7/2,myY+3/2,dot,dot);
-			ellipse(myX+7/2,myY+7/2,dot,dot);
+			point(myX+3/2,myY+3/2);
+			point(myX+3/2,myY+7/2);
+			point(myX+7/2,myY+3/2);
+			point(myX+7/2,myY+7/2);
 		}
 		if (numDots == 5){
-			ellipse(myX+5/2,myY+5/2,dot,dot);
-			ellipse(myX+2/2,myY+2.6/2,dot,dot);
-			ellipse(myX+2/2,myY+7.6/2,dot,dot);
-			ellipse(myX+8/2,myY+2.6/2,dot,dot);
-			ellipse(myX+8/2,myY+7.6/2,dot,dot);
+			point(myX+5/2,myY+5/2);
+			point(myX+2/2,myY+2.6/2);
+			point(myX+2/2,myY+7.6/2);
+			point(myX+8/2,myY+2.6/2);
+			point(myX+8/2,myY+7.6/2);
 		}
 		if (numDots == 6){
-			ellipse(myX+3/2,myY+2/2,dot,dot);
-			ellipse(myX+3/2,myY+5/2,dot,dot);
-			ellipse(myX+3/2,myY+8/2,dot,dot);
-			ellipse(myX+7/2,myY+2/2,dot,dot);
-			ellipse(myX+7/2,myY+5/2,dot,dot);
-			ellipse(myX+7/2,myY+8/2,dot,dot);
+			point(myX+3/2,myY+2/2);
+			point(myX+3/2,myY+5/2);
+			point(myX+3/2,myY+8/2);
+			point(myX+7/2,myY+2/2);
+			point(myX+7/2,myY+5/2);
+			point(myX+7/2,myY+8/2);
 		}
 
 	}
