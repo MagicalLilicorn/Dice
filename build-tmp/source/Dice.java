@@ -73,37 +73,37 @@ class Die //models one single dice cube
 		rect(myX,myY,diceSize,diceSize);
 		stroke(0);
 		if (numDots == 1){
-			point(myX+5/2,myY+5/2);
+			point(myX+diceSize/4,myY+diceSize/4);
 		}
 		if (numDots == 2){
-			point(myX+3/2, myY+3/2);
-			point(myX+7/2, myY+7/2);
+			point(myX, myY);
+			point(myX+diceSize/2, myY+diceSize/2);
 		}
 		if (numDots == 3){
-			point(myX+5/2,myY+2/2);
-			point(myX+5/2,myY+5/2);
-			point(myX+5/2,myY+8/2);
+			point(myX+1,myY+1);
+			point(myX+2,myY+2);
+			point(myX+3,myY+3);
 		}
 		if (numDots == 4){
-			point(myX+3/2,myY+3/2);
-			point(myX+3/2,myY+7/2);
-			point(myX+7/2,myY+3/2);
-			point(myX+7/2,myY+7/2);
+			point(myX+1,myY+1);
+			point(myX+1,myY+3);
+			point(myX+3,myY+1);
+			point(myX+3,myY+3);
 		}
 		if (numDots == 5){
-			point(myX+5/2,myY+5/2);
-			point(myX+2/2,myY+2.6f/2);
-			point(myX+2/2,myY+7.6f/2);
-			point(myX+8/2,myY+2.6f/2);
-			point(myX+8/2,myY+7.6f/2);
+			point(myX+2,myY+2);
+			point(myX+1,myY+1);
+			point(myX+1,myY+3);
+			point(myX+3,myY+1);
+			point(myX+3,myY+3);
 		}
 		if (numDots == 6){
-			point(myX+3/2,myY+2/2);
-			point(myX+3/2,myY+5/2);
-			point(myX+3/2,myY+8/2);
-			point(myX+7/2,myY+2/2);
-			point(myX+7/2,myY+5/2);
-			point(myX+7/2,myY+8/2);
+			point(myX+1,myY+1);
+			point(myX+1,myY+2);
+			point(myX+1,myY+3);
+			point(myX+3,myY+1);
+			point(myX+3,myY+2);
+			point(myX+3,myY+3);
 		}
 
 	}
